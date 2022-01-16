@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. ${STATEMENT}'
+                echo 'Building.. ${params.STATEMENT}'
             }
         }
         stage('Test') {
