@@ -1,13 +1,13 @@
 pipeline {
     agent any
-  parameters {
+    parameters {
         string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
       }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building.. ${STATEMENT}'
             }
         }
         stage('Test') {
